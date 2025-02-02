@@ -28,12 +28,12 @@ export default {
 ],
   entryPointToBrowserMapping: undefined,
   assets: {
-    'index.csr.html': {size: 24309, hash: 'a497bb77ef892caae58e72d6f0e14602a4dac0972c3c686f299e62898073d142', text: () => import('./assets-chunks/index_csr_html.mjs').then(m => m.default)},
-    'index.server.html': {size: 17883, hash: 'b81c5b458e7c25e3cde63964b8b6294507faf623ecc3645f0d4520409fab7556', text: () => import('./assets-chunks/index_server_html.mjs').then(m => m.default)},
-    'Iniciar-sesion/index.html': {size: 46584, hash: '30ac8e8bfff90d6789d3f99ef0927be5ff4756cacdf7f9a4413705937dfb57c7', text: () => import('./assets-chunks/Iniciar-sesion_index_html.mjs').then(m => m.default)},
-    'Registrarse/index.html': {size: 49433, hash: 'df8604f6b793be15c9ddf3dd5b4cd8db1383e3b947e010e380847917ebf53e63', text: () => import('./assets-chunks/Registrarse_index_html.mjs').then(m => m.default)},
-    'index.html': {size: 44301, hash: 'ed898230283c9431c3c42f9f83a5145b443dbab1d71978d1c740fe67caa1dca3', text: () => import('./assets-chunks/index_html.mjs').then(m => m.default)},
-    'InicioPrivado/index.html': {size: 44223, hash: '4803b822b34ae87c3fdf192537b8b6630c7cd227f168a0dfc22946d9bc4bf545', text: () => import('./assets-chunks/InicioPrivado_index_html.mjs').then(m => m.default)},
+    'index.csr.html': {size: 24309, hash: '5b247fee5215a75601f790aecb20099942b4af551bd312cf375586e71617d4e7', text: () => import('./assets-chunks/index_csr_html.mjs').then(m => m.default)},
+    'index.server.html': {size: 17883, hash: '015c9286cf722f26709b0cc116a4eb33171d409a0454afce9533dde7e6cda1e0', text: () => import('./assets-chunks/index_server_html.mjs').then(m => m.default)},
+    'Registrarse/index.html': {size: 49433, hash: '4282c0c1d2202e263f072fa147f0a2b7a57855de3899b2c62a51eadbd054792f', text: () => import('./assets-chunks/Registrarse_index_html.mjs').then(m => m.default)},
+    'Iniciar-sesion/index.html': {size: 46584, hash: '0bd978bae3af44885afe6535f5f5e1bc2210f2532d0911edf80fe68767356fa1', text: () => import('./assets-chunks/Iniciar-sesion_index_html.mjs').then(m => m.default)},
+    'index.html': {size: 44301, hash: '36f43ed7fc7f991f2fb38ab3089686a20373cf4d863805727334b91418d0412d', text: () => import('./assets-chunks/index_html.mjs').then(m => m.default)},
+    'InicioPrivado/index.html': {size: 44223, hash: 'efd2874995045ad6049ef52e504732e91360f092dbeb5e9508047628e3cc26c0', text: () => import('./assets-chunks/InicioPrivado_index_html.mjs').then(m => m.default)},
     'styles-CXQUZ3PB.css': {size: 6979, hash: 'mYIPdabeAag', text: () => import('./assets-chunks/styles-CXQUZ3PB_css.mjs').then(m => m.default)}
   },
 };

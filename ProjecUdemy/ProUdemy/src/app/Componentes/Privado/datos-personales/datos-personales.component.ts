@@ -27,16 +27,16 @@ export class DatosPersonalesComponent implements OnInit {
   constructor(private authService: AuthServiceService) {}
 
   ngOnInit(): void {
-    this.authService.getUsuario().subscribe({
-      next: (usuario) => {
-        if (usuario) {
-          this.nombre = usuario.nombre;
-          this.apellido = usuario.apellido;
-        }
-      }, error: (err) =>{
-        console.error('Error en el nombre', err);
-      }
-    });
+    // this.authService.getUsuario().subscribe({
+    //   next: (usuario) => {
+    //     if (usuario) {
+    //       this.nombre = usuario.nombre;
+    //       this.apellido = usuario.apellido;
+    //     }
+    //   }, error: (err) =>{
+    //     console.error('Error en el nombre', err);
+    //   }
+    // });
 
   }
 }
