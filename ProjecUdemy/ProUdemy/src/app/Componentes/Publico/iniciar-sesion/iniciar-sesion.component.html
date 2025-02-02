@@ -1,0 +1,63 @@
+<!-- Falta
+- Agrgar estilos
+- Conectar con Backend
+
+------------------------------
+- El incio de sesión es con un código de 6 digitos
+
+-->
+
+<div class="contenedor">
+    <div class="izquierda">
+        <img class="ImgIniSesion" src="Imagenes/InicioSesion.webp" alt="InisioSesion">
+    </div>
+
+    <div class="derecha">
+        <p class="textPrincipal"> Inicia sesión para continuar tu experiencia de aprendizaje</p>
+        
+        <form [formGroup]="formularioInicioSesion" (ngSubmit)="onSubmit()" action="">
+            <div class="input-container">
+                <input  placeholder="Correo electrónico" class="InputCorreo" type="text" id="email" formControlName="email">
+                <label for="email"> Correo electrónico</label>
+            </div>
+
+           <!-- se agregan validaciones -->
+           <div *ngIf = "formularioInicioSesion.get('email')?.invalid && formularioInicioSesion.get('email')?.touched">
+
+            <p *ngIf="formularioInicioSesion.get('email')?.errors?.['required']">El correo es requerido</p>
+                <p *ngIf="formularioInicioSesion.get('email')?.errors?.['email']">Ingrese correo valido</p>
+           </div>
+           <br>
+
+           <div class="input-container">
+            <input placeholder="Contraseña" class="InputPassword" type="text"  id="password" formControlName="password">
+            <label for="password"> Contraseña</label>
+        </div>
+
+           <!-- Validación de contraseña -->
+                <p *ngIf="formularioInicioSesion.get('password')?.errors?.['required']">La contraseña es obligatoria</p>
+
+            <button class="btnCorreo" >
+                <mat-icon fontIcon="mail" class="buscarIcon"></mat-icon> 
+                <!-- Verifica que el icono no sea delineado -->
+                <p>Continuar con correo electrónico</p>
+            </button>
+        </form>
+
+        <div class="logos">
+            <img class="logoIc" src="Imagenes/Google.jpg" alt="Googl">
+            <img class="logoIc" src="Imagenes/Facebbok.png" alt="Facebook">
+            <img class="logoIc" src="Imagenes/Apple-Logo.jpg" alt="Facebook">
+        </div>
+        
+        <div class="Opciones">
+            <div class="Opc1">
+                <p>¿No tienes una cuenta? </p>
+                <p>Regístrate</p>
+            </div>
+            <div class="Opc2">
+                <p>Iniciar sesión con tu organización</p>
+            </div>
+        </div>
+    </div>
+</div>

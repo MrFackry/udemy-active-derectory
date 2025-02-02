@@ -1,0 +1,91 @@
+<!-- Partes:
+ - Logo de Udemy
+ - Explorar
+ - Barra de buscador: lupa - /Buscar cualquier cosa
+ - Udemy Businnes
+ - Enseñar en Udemy
+ - Logo de Carro
+ - Boton de Iniciar Sesión - Blanco letra negra
+ - Boton de Registrarse - Negro con letra blanca
+ - Boton logo del mundo - cambia de idioma 
+ - A 800 el menu se vuelve de hamburguesaaaaa: El logo de Udeny cambia a l mitad, los dos iconos pasan al
+ lado izquierdo y la hamburguesa a la izquierda
+ -->
+
+
+ <!-- ////////////////Estrutura del menú según Angular Material -->
+  <div class="menu-container">
+    <nav class="menu-normal"> 
+      <div class="menu">
+
+        <img class="Logo" src="Imagenes/Udemy_logo.png" alt="LogoImagen">
+      
+        <button [matMenuTriggerFor]="aboveMenu">Explorar</button>
+        <mat-menu #aboveMenu="matMenu" yPosition="above">
+          <button mat-menu-item>Item 1</button>
+          <button mat-menu-item>Item 2</button>
+        </mat-menu>
+        
+        <!-- Agregar barra buscadora con lupa -->
+        <div class="barraBuscar">
+          <div class="buscar">
+            <mat-icon fontIcon="search" class="buscarIcon"></mat-icon>
+            <input type="text" placeholder="Buscar cualquier cosa">
+          </div>
+        </div>
+        
+        
+        <button [matMenuTriggerFor]="belowMenu">Udemy Businnes</button>
+        <!-- Despliega mensaje -->
+        <mat-menu #belowMenu="matMenu" yPosition="below">
+          <button mat-menu-item>Item 1</button>
+          <button mat-menu-item>Item 2</button>
+        </mat-menu>
+        
+        <button  [matMenuTriggerFor]="beforeMenu">Enseñar en Udemy</button>
+        <!-- Despliega mensaje -->
+        <mat-menu #beforeMenu="matMenu" xPosition="before">
+          <button mat-menu-item>Item 1</button>
+          <button mat-menu-item>Item 2</button>
+        </mat-menu>
+        
+        <mat-icon class="material-symbols-outlined">shopping_cart</mat-icon>
+      
+      
+        <div class="btnEnMenu ej1">
+          <a  href="/Iniciar-sesion"> Iniciar Sesión</a>
+        </div>
+      
+        <div class="btnEnMenu ej2">
+          <a class="btnej2"  href="/Registrarse"> Registrate</a>
+        </div>
+      
+        <div class="btnEnMenu ej3">
+          <mat-icon class="material-symbols-outlined">language</mat-icon>
+        </div>
+      
+      </div>
+      
+    </nav>
+  </div>
+
+<div class="menu-hamburguesa">
+  <div class="hambuerguesa-header">
+    <button mat-icon-button class="hamb-btn" (click)="toggleMenu()">
+      <mat-icon>menu</mat-icon> </button>
+      <img class="LogoHb" src="Imagenes/Udemy_logo.png" alt="LogoImagen">
+      <div class="right-icons">
+        <mat-icon fontIcon="search" class="buscarIcon"></mat-icon>
+        <mat-icon class="material-symbols-outlined">shopping_cart</mat-icon>
+      </div>
+  </div>
+
+
+  <div class="menu-drawer" [class.open]="isMenuOpen">
+    <a  href="/iniciar-sesion"> Iniciar Sesión</a>
+    <a class="btnej2"  href="/registrarse"> Registrate</a>
+    <button mat-menu-item >Explorar</button>
+    <button mat-menu-item>Udemy Business</button>
+    <button mat-menu-item>Enseñar en Udemy</button>
+  </div>
+</div>
