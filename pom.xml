@@ -29,6 +29,7 @@
 	<properties>
 		<java.version>23</java.version>
 		<spring-ai.version>1.0.0-M4</spring-ai.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
 	<!--DEPENDECIAS-->
@@ -77,6 +78,22 @@
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
 
+<!--		Dependencias de Docker con openLDAP para a conectividad-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.ldap</groupId>
+			<artifactId>spring-ldap-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-ldap</artifactId>
+		</dependency>
+
+		<!--	FIN DE LA Dependencias de Docker con openLDAP para a conectividad-->
+
 
 	</dependencies>
 
@@ -92,6 +109,10 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
+
+
+
+
 
 	<build>
 		<plugins>
